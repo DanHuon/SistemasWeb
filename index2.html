@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Burguer</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dev Burguer</h1>
+        <p>O código mais saboroso da cidade</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#horario">Horário de Funcionamento</a></li>
+            <li><a href="#pedido">Faça seu Pedido</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="cardapio">
+            <h2>Cardápio</h2>
+            <ul>
+                <li>
+                    <strong>Hamburgão em C++</strong>
+                    <br>O clássico com muito queijo e bacon, compilado na hora para saciar sua fome.
+                    <br>R$ 35,00
+                </li>
+                <li>
+                    <strong>React Veggie</strong>
+                    <br>Hambúrguer de grão de bico com componentes frescos e 100% vegetariano.
+                    <br>R$ 30,00
+                </li>
+            </ul>
+        </section>
+
+        <section id="horario">
+            <h2>Horário de Funcionamento</h2>
+            <p>Terça a Domingo, das 18h às 23h</p>
+        </section>
+
+        <section id="localizacao">
+            <h2>Localização</h2>
+            <p>Rua das Linguagens, 404 - Centro</p>
+        </section>
+
+        <section id="pedido">
+            <h2>Faça seu Pedido</h2>
+            <form action="processa_pedido.php" method="GET">
+                
+                <label for="nome">Nome do cliente:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <fieldset>
+                    <legend>Escolha do hambúrguer:</legend>
+                    <input type="radio" id="hamburgue_cpp" name="hamburguer" value="cpp" required>
+                    <label for="hamburgue_cpp">Hamburgão em C++ - R$ 28,00</label><br>
+                    
+                    <input type="radio" id="class_burger" name="hamburguer" value="class">
+                    <label for="class_burger">Class Burger - R$ 32,00</label><br>
+                    
+                    <input type="radio" id="react_veggie" name="hamburguer" value="react">
+                    <label for="react_veggie">React Veggie - R$ 30,00</label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Adicionais:</legend>
+                    <input type="checkbox" id="bacon" name="adicional_bacon" value="sim">
+                    <label for="bacon">Bacon extra (+ R$ 5,00)</label><br>
+                    
+                    <input type="checkbox" id="queijo" name="adicional_queijo" value="sim">
+                    <label for="queijo">Queijo extra (+ R$ 4,00)</label><br>
+                    
+                    <input type="checkbox" id="batata" name="adicional_batata" value="sim">
+                    <label for="batata">Batata frita (+ R$ 8,00)</label>
+                </fieldset><br>
+
+                <label for="observacoes">Observações (opcional):</label><br>
+                <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dev Burguer Sabor em código</p>
+    </footer>
+
+</body>
+</html>
